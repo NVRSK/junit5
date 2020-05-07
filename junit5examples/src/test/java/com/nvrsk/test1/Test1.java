@@ -1,6 +1,8 @@
-package com.nvrsk;
+package com.nvrsk.test1;
 
-import org.junit.jupiter.api.Test;
+import com.nvrsk.BaseScenario;
+import com.nvrsk.ScenarioFactory;
+import com.nvrsk.ScenarioTest;
 
 import java.util.List;
 
@@ -31,13 +33,13 @@ public class Test1 {
         }
     }
 
-    static class Factory implements ScenarioFactory<Data>{
+    static class Factory implements ScenarioFactory<Data> {
 
         @Override
         public List<Data> createScenarios() {
             return asList(
                     new Data(1,2,3),
-                    new Data(-1, 1, 10)
+                    new Data(-1, 1, 0)
             );
         }
     }
